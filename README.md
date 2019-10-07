@@ -130,10 +130,12 @@ var numThree = Bool.random() ? Int.random(in: 0...10) : nil
 ```
 Answer
 ```swift
-if let numSum5A = numOne5,let numSum5B = numTwo5,let numSumC = numThree5 {
-print("The sum of the numbers is \(numSum5A + numSum5B + numSumC)")
+var sum5 = (numOne5 ?? 0) + (numTwo5 ?? 0) + (numThree5 ?? 0)
+
+if sum5 == 0 {
+print("The sum of the numbers is 0")
 } else {
-    print("The values of the numbers is nil")
+    print("The values of the numbers is \(sum5)")
 }
 ```
 ## Question 6
